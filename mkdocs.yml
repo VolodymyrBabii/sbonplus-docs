@@ -1,0 +1,186 @@
+site_name: Sbon_Docs 
+site_description : Документрація по СБОН+ від Бескид Ком. 
+# Описание сайта. Добавляется в meta в html-заголовке каждой страницы.
+#site_description: Документрація по СБОН+ від Бескид Ком.
+# Опис сайту. Добавляется в meta в html-заголовке каждой страницы.
+site_author: Beskyd Com  Team
+
+# Theme
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/Logo_1.png
+  icon:
+    annotation: material/arrow-right-circle 
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+# Additional configuration
+extra:
+#  homepage: https://beskyd.com
+ social:
+ social:
+   - icon: fontawesome/brands/github
+     link: https://github.com/squidfunk
+   - icon: fontawesome/brands/docker
+     link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+   - icon: fontawesome/brands/python
+     link: https://pypi.org/project/mkdocs-material/
+   - icon: fontawesome/brands/mastodon
+     link: https://fosstodon.org/@squidfunk
+   - icon: fontawesome/brands/twitter
+     link: https://twitter.com/squidfunk
+
+# Plugins
+plugins:
+   - search:
+  #  - with-pdf
+      # foo: bar
+  #  - glightbox:
+  #      touchNavigation: true
+  #      loop: false
+  #      effect: zoom
+  #      slide_effect: slide
+  #      width: 100%
+  #      height: auto
+  #      zoomable: true
+  #      draggable: true
+  #      skip_classes:
+  #       - custom-skip-class-name
+  #      auto_caption: false
+  #      caption_position: bottom
+  #      background: white
+  #      shadow: true
+
+  #  - plantuml:
+  #       puml_url: https://www.plantuml.com/plantuml/
+  #       num_workers: 8
+  #  - print-site  
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  # pip install mkdocs-glightbox
+  - attr_list
+  - md_in_html
+  - abbr
+  - admonition
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+        # anchor_linenums: true
+        # line_spans: __span
+        # pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
+
+  # Діаграми
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # Виноски
+  - footnotes
+  # Форматування
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+copyright: Copyright &copy; 2024-2025 BVM
+   
+# Page tree  
+nav:
+  - Home: 'index.md'
+  - Все про СБОН+: 
+    - About Sbon/index.md
+    - 'Функціональні можливості' : 'About Sbon/Functional capabilities.md'
+    - 'Архітектура СБОН'         : 'About Sbon/Shema.md'
+        
+  - User Guides:
+    - User Guides/index.md
+    - 'Інструкція налаштування договорів': 'User Guides/Iнструкцiя з налаштування договорів.md'
+  - Developer Guides:
+    - Developer Guides/index.md
+    - 'Use Git': 'Developer Guides/Git.md'
+  - Все про Markdown:
+    - About Markdown/index.md
+    - 'Examples'        : 'About Markdown/example.md'
+    - 'VS code editor'  : 'About Markdown/VS_code.md'
+
+  
+
+
