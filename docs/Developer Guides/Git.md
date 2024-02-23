@@ -80,6 +80,8 @@ git pull origin main
 git add .
 git commit -m "Оновлення файлів"
 git push origin main
+або
+git push -u origin master
 ```
   
   Ці команди додадуть всі зміни, які ви внесли, зроблять коміт з описом "Оновлення файлів" та надішлють їх на гілку main вашого віддаленого репозиторію.
