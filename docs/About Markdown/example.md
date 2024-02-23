@@ -2,7 +2,7 @@
 title: Examples
 icon: material/newspaper-variant-outline
 ---
-
+# Приклади 
 <!-- # Examples -->
 <!-- ![Logo](..//BESKYD_COM_LOGO.png) -->
 
@@ -383,6 +383,9 @@ And here's another paragraph that's visible.
 
 ### Flowchar Diagram 
 
+
+## [Діаграми](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
+
 ```flow
 st=>start: Login
 op=>operation: Login operation
@@ -393,8 +396,6 @@ st->op->cond
 cond(yes)->e
 cond(no)->op
 ```
-
-## [Діаграми](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
 
 
 ### діаграми класів 
@@ -425,8 +426,83 @@ classDiagram
     }
 ```
 
+### Використання блок-схем
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+  E --> F[End];
+```
+### Діаграма послідовності
+
+``` mermaid
+sequenceDiagram
+  autonumber
+  Клієнт->>Касир: Оплатити за газ
+  loop Набір платежу
+      Касир->>Касир: Перевірка даних платежу.  
+  end
+  Касир-->>Клієнт: Називає суму платежів!
+  Клієнт-->>Касир: Ок!
+  Касир->>СБОН: Виконати операцію?
+  Note right of Касир: Чекає результату операції!
+  СБОН-->>Касир: Операції ок! Результат - квитанція!
+  Касир-->>Клієнт: Надає суму оплати!
+```
+
+### Діаграма стану
+
+``` mermaid
+stateDiagram-v2
+  state fork_state <<fork>>
+    [*] --> fork_state
+    fork_state --> State2
+    fork_state --> State3
+
+    state join_state <<join>>
+    State2 --> join_state
+    State3 --> join_state
+    join_state --> State4
+    State4 --> [*]
+```
+
+### Діаграма класів
+``` mermaid
+classDiagram
+  Person <|-- Student
+  Person <|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" <-- "0..1" Person:lives at
+  class Student{
+    +int studentNumber
+    +int averageMark
+    +isEligibleToEnrol()
+    +getSeminarsTaken()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }
+```
+
 
 ### Sequence Diagram  
+<!-- plantuml-markdown -->
 
 ```puml
 @startuml sign_in_sequence  

@@ -34,7 +34,7 @@
     - опис протоколів, API.
     ```
 
-    [:octicons-arrow-right-24: Читати далі... ][about sbon]
+    [:octicons-arrow-right-24: Читати далі... ][about developer]
 
 -   :material-monitor-account:{ .lg .middle } __Для користувачів СБОН__
 
@@ -48,10 +48,10 @@
     - інструкція по ПТТЕ
     ```
 
-    [:octicons-arrow-right-24: Читати далі... ][about sbon]
+    [:octicons-arrow-right-24: Читати далі... ][about users]
 
 
--   :material-language-markdown:{ .lg .middle } __Документація для розробників документації MkDocs__
+-   :material-language-markdown:{ .lg .middle } __Для розробників документації MkDocs__
 
     ---
    В цьому розділі приведено перелік основної документації по розробці документів Markdown, приклади використання тегів, приклади тексту, блоків та інша необхідна інформація.
@@ -77,6 +77,8 @@
   [GitHub]: https://github.com/squidfunk/mkdocs-material
   [hiding both sidebars]: ../setup/setting-up-navigation.md#hiding-the-sidebars
   [about sbon]: /About%20Sbon/
+  [about developer]: /Developer%20Guides/ 
+  [about users]: /User%20Guides/
   [About Markdown]: /About%20Markdown/
 
 
@@ -84,9 +86,9 @@
 
 ## Історія змін в документації
 
-| Версія документа | Дата зміни  | Опис зміни                |
+| Версія документа | Дата зміни  | Опис змін в документації |
 | :----- | :--------- | :----------------------------------- |
-| `1.01` |            |                                      |
+| `1.01` | 22.02.2024 | Додано основні розділи докумнта: Опис СБОН, для розробників СБОН, для користувачів СБОН, для розробників документації|
 | `1.00` | 12.02.2024 | Створено початкову версію документа  |
 |   |      ||
 

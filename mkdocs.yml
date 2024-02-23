@@ -79,7 +79,7 @@ extra:
 
 # Plugins
 plugins:
-   - search:
+   - search
   #  - with-pdf
       # foo: bar
   #  - glightbox:
@@ -101,7 +101,24 @@ plugins:
   #  - plantuml:
   #       puml_url: https://www.plantuml.com/plantuml/
   #       num_workers: 8
-  #  - print-site  
+   - print-site:
+      add_to_navigation: true
+      print_page_title: ''
+      add_print_site_banner: false
+      # Table of contents
+      add_table_of_contents: true
+      toc_title: 'Table of Contents'
+      toc_depth: 6
+      # Content-related
+      add_full_urls: false
+      enumerate_headings: true
+      enumerate_figures: true
+      add_cover_page: false
+      cover_page_template: ""
+      path_to_pdf: ""
+      include_css: true
+      enabled: true
+      exclude:
 
 # Extensions
 markdown_extensions:
@@ -135,7 +152,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:

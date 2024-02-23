@@ -80,9 +80,18 @@ mkdocs serve
     git push origin main
     ```
  
-## Експорт сайту в PDF
+## Додаткові сервіси і плагіни для роботи з Markdocs
 
-Ознайомтеся з описом за цією адресою *[mkdocs-print-site-plugin](https://timvink.github.io/mkdocs-print-site-plugin/index.html)*
+### Експорт сайту в PDF
+
+Ознайомтеся з описом можливостй плагіна за цією адресою *[mkdocs-print-site-plugin](https://timvink.github.io/mkdocs-print-site-plugin/index.html)*.
+Плагін дозволяє сторінку сайту конвертувати в PDF, поєднуючи всі сторінки, дозволяючи відвідувачам вашого сайту вибирати ***Файл > Друк > Зберегти як PDF для всього сайту***.
+
+
+### Конвертація Google Docs документів в Markdocs
+
+Використовуючи безкоштовне доповнення Docs to Markdown із відкритим кодом для Документів Google, ви можете швидко та легко експортувати документ Google у Markdown. (Додатковий компонент не допомагає імпортувати Markdown у Документи Google.)
+Деталі за адресою *[docs-to-markdown](https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607)*
 
 
 
